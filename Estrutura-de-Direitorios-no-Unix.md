@@ -1,16 +1,22 @@
-**Estrutura de Diretórios no Unix**
+## Sistema de Arquivos
 
-A árvore de diretórios do sistema Unix é organizada em várias ramificações menores, cada uma desempenhando um papel específico. A seguir, estão listados os diretórios mais comuns:
+O **Sistema de Arquivos** é uma estrutura lógica que possibilita o armazenamento e recuperação de arquivos. No Unix, arquivos são contidos em diretórios (ou pastas), conectados em uma árvore que se inicia no diretório raiz (designado por `/`). Mesmo arquivos em dispositivos de armazenamento diferentes (discos rígidos, disquetes, CDs, DVDs, sistemas de arquivos em rede) precisam ser conectados à árvore para que seu conteúdo seja acessado. Cada dispositivo de armazenamento possui sua própria árvore de diretórios.
 
-- **/**: Diretório raiz. Este é o diretório principal do sistema, contendo todos os outros diretórios do sistema.
+O processo de conectar a árvore de diretórios de um dispositivo de armazenamento à árvore de diretórios raiz é chamado de *montar dispositivo de armazenamento* (montagem) e é realizado por meio do comando `mount`. A montagem associa o dispositivo a um subdiretório.
 
-- **/bin**: Contém arquivos e programas do sistema frequentemente utilizados pelos usuários.
+## Estrutura de Diretórios
 
-- **/boot**: Armazena arquivos necessários para a inicialização do sistema.
+A árvore de diretórios do Unix é dividida em várias ramificações menores e pode variar de uma versão para outra. Os diretórios mais comuns são os seguintes:
 
-- **/dev**: Contém arquivos utilizados para acessar dispositivos (periféricos) existentes no computador.
+- **/**: Diretório raiz – este é o diretório principal do sistema. Dentro dele estão todos os diretórios do sistema.
 
-- **/etc**: Local para arquivos de configuração específicos do computador local.
+- **/bin**: Contém arquivos, programas do sistema, que são usados com frequência pelos usuários.
+
+- **/boot**: Contém arquivos necessários para a inicialização do sistema.
+
+- **/dev**: Contém arquivos usados para acessar dispositivos (periféricos) existentes no computador.
+
+- **/etc**: Arquivos de configuração de seu computador local.
 
 - **/home**: Diretórios contendo os arquivos dos usuários.
 
@@ -18,21 +24,19 @@ A árvore de diretórios do sistema Unix é organizada em várias ramificações
 
 - **/mnt**: Diretório de montagem de dispositivos.
 
-  - **/mnt/cdrom**: Subdiretório onde os CDs são montados. Após a montagem, o conteúdo do CD estará dentro deste diretório.
+  - **/mnt/cdrom**: Subdiretório onde são montados os CDs. Após a montagem, o conteúdo do CD se encontrará dentro deste diretório.
 
-  - **/mnt/floppy**: Subdiretório onde os disquetes são montados. Após a montagem, o conteúdo do disquete estará dentro deste diretório.
+  - **/mnt/floppy**: Subdiretório onde são montados os disquetes. Após a montagem, o conteúdo do disquete se encontrará dentro deste diretório.
 
-- **/proc**: Sistema de arquivos do núcleo "Kernel". Contém arquivos utilizados pelo kernel do sistema e por diversos programas e dispositivos.
+- **/proc**: Sistema de arquivos do núcleo *Kernel*. São arquivos utilizados pelo kernel do sistema e são utilizados por diversos programas e dispositivos.
 
-- **/root**: Diretório do usuário root, o superusuário do sistema.
+- **/root**: Diretório do usuário root.
 
 - **/sbin**: Diretório de programas usados pelo superusuário (root) para administração e controle do funcionamento do sistema.
 
 - **/tmp**: Diretório para armazenamento de arquivos temporários criados por programas.
 
-- **/usr**: Contém a maior parte dos programas do sistema. Normalmente acessível apenas como leitura.
+- **/usr**: Contém a maior parte de seus programas. Normalmente acessível somente como leitura.
 
-- **/var**: Contém a maior parte dos arquivos gravados com frequência pelos programas do sistema.
-
-Se você leu até aqui, não custa nada deixar um comentário abaixo. Deixe um comentário! Valeu...
+- **/var**: Contém a maior parte dos arquivos que são gravados com frequência pelos programas do sistema.
 
