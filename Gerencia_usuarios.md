@@ -52,7 +52,7 @@ leandrors@linuxlemenet:~$ whoami
 
 root
 
-###O comando sudo
+### O comando sudo
 
 O comando sudo oferece outra abordagem para permitir que usuários tenham acesso administrativo. Quando um usuário confiável precede um comando administrativo com sudo, o sistema pede que o usuário entre a sua própria senha. Então, após a autenticação, e assumindo que seja permitido, o comando administrativo é executado como se o usuário fosse o root.
 
@@ -97,7 +97,7 @@ Um usuário pode pertencer a qualquer número de grupos, e herdará todas as per
 O GID (group id) é um código, como o user id (no arquivo /etc/passwd), mas relativo ao grupo.
 Finalmente, user list é a lista (separada por vírgulas) de todos os usuários que pertencem a este grupo.
 
-###Adicionando grupos – comando groupadd
+### Adicionando grupos – comando groupadd
 
 Para facilitar a administração do sistema, pode-se usar o conceito de grupos de usuários com perfis semelhantes. Por exemplo, definir grupos conforme os departamentos de uma empresa.
 
@@ -148,3 +148,4 @@ mlocate:x:125:
 polkituser:x:126:
 web200801:x:1001:
 bsi200801:x:1002:
+
