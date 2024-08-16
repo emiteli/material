@@ -14,10 +14,11 @@
 * git push -u origin main
 
 ====================================================================
-Para Executar Totvs.wxs
 
-Priemiro voce vai usar o comando cadle.exe para gerar o arquivo.wixobj
-candle.exe totv.wxs
+## Para Executar Totvs.wxs
 
-Depois quer gerar o arquivo voce faz seguinte comando
-light.exe totv.wixobj -o setup.msi
+* Priemiro voce vai usar o comando cadle.exe para gerar o arquivo.wixobj
+* candle.exe totv.wxs
+
+* Depois quer gerar o arquivo voce faz seguinte comando
+* light.exe totv.wixobj -o setup.msi
