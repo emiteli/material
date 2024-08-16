@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="e27f9024-0ce6-4b34-a943-408812190e17" Name="SmartClient Installer" Language="1033" Version="1.0.0.0" Manufacturer="Emiteli Indústria Eletrônica S/A" UpgradeCode="fdb71f93-3bb8-48d7-8b18-0e0eaf10d8b8" Codepage="65001">
+    <Package InstallerVersion="500" Compressed="yes" InstallScope="perMachine" />
+    <Media Id="1" Cabinet="product.cab" EmbedCab="yes" />
+    <Feature Id="ProductFeature" Title="SmartClient" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+    </Feature>
+  </Product>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">      
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="SmartClient">
+            <Component Id="ApapiComponet" Guid="e4fa1a5a-f0f2-47f4-b213-de32595f169a">
+              <File Source="C:\TOTVS\Producao\apapi.dll" />
+            </Component>
+            <Component Id="Apapi64Componet" Guid="3973ad23-d72a-45be-b848-2dce62dda8ab">
+              <File Source="C:\TOTVS\Producao\apapi64.dll" />
+            </Component>
+            <Component Id="ApconnComponet" Guid="c521775a-30b7-406b-8bed-83057976cb68">
+              <File Source="C:\TOTVS\Producao\apconn.dll" />
+            </Component>
+            <Component Id="ApexcelComponet" Guid="83a8e4a8-a164-4ff0-8e7f-9ddc299dcbfa">
+            <File Source="C:\TOTVS\Producao\apexcel80.xla" />
+            </Component>
+            <Component Id="EscapiComponet" Guid="12bd1f4d-0567-452a-8f32-6edfaf24f35a">
+              <File Source="C:\TOTVS\Producao\escapi.dll" />
+            </Component>
+            <Component Id="ImageloadComponet" Guid="5fc82173-0785-4b35-8c97-8a37e3b87a18">
+            <File Source="C:\TOTVS\Producao\imageload2.dll" />
+            </Component>
+            <Component Id="LanguageComponet" Guid="93bea72e-f415-4889-bcd2-bdd4cbeadfed">
+              <File Source="C:\TOTVS\Producao\language.ini" />
+            </Component>
+            <Component Id="LibCryptoComponet" Guid="2e6fa34e-ad60-46aa-8e16-bbbe0ffed058">
+              <File Source="C:\TOTVS\Producao\lib_crypto.dll" />
+            </Component>
+            <Component Id="LibCrypto11Componet" Guid="8c88bf6c-8749-40b1-9474-cd6c208bc960">
+              <File Source="C:\TOTVS\Producao\libcrypto-1_1-x64.dll" />
+            </Component>
+            <Component Id="Libssl11Componet" Guid="2b923633-2e5c-4613-89ac-1e497eefa008">
+              <File Source="C:\TOTVS\Producao\libssl-1_1-x64.dll" />
+            </Component>
+            <Component Id="MpexcelComponet" Guid="022e57ce-8576-4b7a-a816-123c233d00a1">
+              <File Source="C:\TOTVS\Producao\mpexcel.dll" />
+            </Component>
+            <Component Id="MpprojectComponet" Guid="21e615bf-beb2-4913-800b-191c16c03d3e">
+              <File Source="C:\TOTVS\Producao\mpproject.dll" />
+            </Component>
+            <Component Id="MpvisioComponet" Guid="1ac7b8ec-8a83-4cbf-b912-c7c8b6f7875e">
+              <File Source="C:\TOTVS\Producao\mpvisio.vsl" />
+            </Component>
+            <Component Id="MpwordComponet" Guid="19109796-7722-4a02-8b80-4c515d2b062c">
+              <File Source="C:\TOTVS\Producao\mpword.dll" />
+            </Component>
+            <Component Id="Mswin32extComponet" Guid="a3ab71bb-be0e-454c-8787-f42e660c2a1d">
+              <File Source="C:\TOTVS\Producao\mswin32ext.dll" />
+            </Component>
+            <Component Id="Opengl32Componet" Guid="45ba20cc-66d9-45b5-af1b-2c3d7e1b6183">
+              <File Source="C:\TOTVS\Producao\opengl32.dll" />
+            </Component>
+            <Component Id="PrinterComponet" Guid="9a84b626-8dda-48f2-a7fb-8945113ac5fc">
+              <File Source="C:\TOTVS\Producao\printer.exe" />
+            </Component>
+            <Component Id="QtwebEngineProcessComponet" Guid="76131447-35d0-4c2c-8b03-644d0d725c96">
+              <File Source="C:\TOTVS\Producao\QtWebEngineProcess.exe" />
+            </Component>
+            <Component Id="SmartClientComponet" Guid="b49f3ae6-9c00-436a-9850-ddfa660cdf6d">
+              <File Source="C:\TOTVS\Producao\smartclient.exe" />
+            </Component>
+            <Component Id="SmartclientiniComponet" Guid="1b885bcf-d1ba-4a78-b3d5-2d6567ac0bf7">
+              <File Source="C:\TOTVS\Producao\smartclient.ini" />
+            </Component>
+            <Component Id="Tolecontainer64Componet" Guid="16ba054e-961b-41a8-9754-420ead0b4dc9">
+              <File Source="C:\TOTVS\Producao\TOleContainer64Installer.msi" />
+            </Component>
+            <Component Id="TotvscaComponet" Guid="368ce732-5ebc-451a-99b3-23e4642c611b">
+              <File Source="C:\TOTVS\Producao\totvs_ca.dll" />
+            </Component>
+          <Directory Id="BEARERFOLDER" Name="bearer">
+            <Component Id="BearerComponent" Guid="845e4915-9a72-4495-bacf-02f49ba7bc16">
+              <File Source="C:\TOTVS\Producao\bearer\qgenericbearer.dll" />
+            </Component>
+          </Directory>          
+          <Directory Id="DLLS515FOLDER" Name="dlls515">
+            <Component Id="ApiMsWinCoreFileL12Component" Guid="74983742-0384-4c2b-9d4e-5ff1e36986dc">
+              <File Source="C:\TOTVS\Producao\dlls515\api-ms-win-core-file-l1-2-0.dll" />
+            </Component>
+            <Component Id="ApiMsWinCoreFileL21Component" Guid="44322edb-0010-40d8-99ed-63dbedaf066f">
+              <File Source="C:\TOTVS\Producao\dlls515\api-ms-win-core-file-l2-1-0.dll" />
+            </Component>
+            <Component Id="ApiMsWinCoreLocazation" Guid="2145cee9-bc9f-4972-b1ff-52d47d3be686">
+                <File Source="C:\TOTVS\Producao\dlls515\api-ms-win-core-localization-l1-2-0.dll" />
+            </Component>
+            <Component Id="ApiMsWinCoreProcessthreadsComponet" Guid="f0386c10-16f1-4d4c-8912-02baa12fa0d5">
+                <File Source="C:\TOTVS\Producao\dlls515\api-ms-win-core-processthreads-l1-1-1.dll" />
+            </Component>
+            <Component Id="ApiMsWinCoreSynch" Guid="8d4e94ef-7841-4c04-b216-1af76e316746">
+                <File Source="C:\TOTVS\Producao\dlls515\api-ms-win-core-synch-l1-2-0.dll" />
+            </Component>
+            <Component Id="ApiMsWinCoreTimezone" Guid="df1d711f-0a29-4500-b0b1-5f0f38c08b85">
+                <File Source="C:\TOTVS\Producao\dlls515\api-ms-win-core-timezone-l1-1-0.dll" />
+            </Component>
+            <Component Id="ApiMsWinCrtconio" Guid="6af4afef-c55f-4a27-b840-f0decd435eb1">
+              <File Source="C:\TOTVS\Producao\dlls515\api-ms-win-crt-conio-l1-1-0.dll" />
+            </Component>
+            <Component Id="ApiMsWinCrtconvert" Guid="f5d11ac7-14dc-45fb-bff6-6cefa41b35cb">
+              <File Source="C:\TOTVS\Producao\dlls515\api-ms-win-crt-convert-l1-1-0.dll" />
+            </Component>
+            <Component Id="ApiMsWinCrtEnvironment" Guid="13287038-62b0-45ef-8782-f41854befb00">
+              <File Source="C:\TOTVS\Producao\dlls515\api-ms-win-crt-environment-l1-1-0.dll" />
+            </Component>
+            <Component Id="apimswincrtfilesysteml110" Guid="b2a171df-9e1e-469d-93f1-35a67269d060">
+              <File Source="C:\TOTVS\Producao\dlls515\api-ms-win-crt-filesystem-l1-1-0.dll" />
+            </Component>
+            <Component Id="apimswincrtheapl110" Guid="9c112d00-d57f-4d18-85df-4b64aee9761e">
+              <File Source="C:\TOTVS\Producao\dlls515\api-ms-win-crt-heap-l1-1-0.dll" />
+            </Component>
+            <Component Id="apimswincrtlocalel110" Guid="0752178d-d2f2-4517-a418-33540113b40e">
+              <File Source="C:\TOTVS\Producao\dlls515\api-ms-win-crt-locale-l1-1-0.dll" />
+            </Component>
+            <Component Id="apimswincrtmathl110" Guid="08bf9f57-b41f-4215-9f7f-01e8bad0e7d5">
+              <File Source="C:\TOTVS\Producao\dlls515\api-ms-win-crt-math-l1-1-0.dll" />
+            </Component>
+            <Component Id="apimswincrtmultibytel110" Guid="2a6ab7d8-2dc7-4af2-af4d-17a6ae4c45b2">
+              <File Source="C:\TOTVS\Producao\dlls515\api-ms-win-crt-multibyte-l1-1-0.dll" />
+            </Component>
+            <Component Id="apimswincrtruntimel110" Guid="9ca16f78-85c2-47ab-9b74-0d0dcf77b997">
+              <File Source="C:\TOTVS\Producao\dlls515\api-ms-win-crt-runtime-l1-1-0.dll" />
+            </Component>
+            <Component Id="apimswincrtstdiol110" Guid="af69a2e1-249c-48cf-9c8a-6af308af3e41">
+              <File Source="C:\TOTVS\Producao\dlls515\api-ms-win-crt-stdio-l1-1-0.dll" />
+            </Component>
+            <Component Id="apimswincrtstringl110" Guid="144902f3-3d84-4eb0-91fc-dca44a6c0392">
+              <File Source="C:\TOTVS\Producao\dlls515\api-ms-win-crt-string-l1-1-0.dll" />
+            </Component>
+            <Component Id="apimswincrttimel110" Guid="565ca8c1-7fbb-4583-82f5-cd188c1def7a">
+              <File Source="C:\TOTVS\Producao\dlls515\api-ms-win-crt-time-l1-1-0.dll" />
+            </Component>
+            <Component Id="apimswincrtutilityl110" Guid="eaea23f5-6f3d-43fe-bfaa-2d0956b69508">
+              <File Source="C:\TOTVS\Producao\dlls515\api-ms-win-crt-utility-l1-1-0.dll" />
+            </Component>
+            <Component Id="D3Dcompiler47" Guid="0323394a-d3c7-468b-a39d-253e6786c854">
+              <File Source="C:\TOTVS\Producao\dlls515\D3Dcompiler_47.bak" />
+            </Component>
+            <Component Id="kdchart2" Guid="8d1794bf-1326-4b56-91a7-634ae58e08e0">
+              <File Source="C:\TOTVS\Producao\dlls515\kdchart2.dll" />
+            </Component>
+            <Component Id="dlls515.manifest" Guid="97c76c9e-3f05-42d3-a45e-60fcffe6fec7">
+              <File Source="C:\TOTVS\Producao\dlls515\dlls515.manifest" />
+            </Component>
+            <Component Id="libEGL.dll" Guid="97417449-99f3-4110-abbe-72171a1286bc">
+              <File Source="C:\TOTVS\Producao\dlls515\libEGL.dll" />
+            </Component>
+            <Component Id="libGLESv2" Guid="0c09e08f-1094-488c-b1ca-0772f7d8e844">
+              <File Source="C:\TOTVS\Producao\dlls515\libGLESv2.dll" />
+            </Component>
+            <Component Id="svcp1401" Guid="1a0f63b1-88a6-419d-bed9-4435d66f5930">
+              <File Source="C:\TOTVS\Producao\dlls515\msvcp140_1.dll" />
+            </Component>
+            <Component Id="msvcp1401" Guid="51e04fde-f6c9-43c0-8096-c2341a2304dd">
+              <File Source="C:\TOTVS\Producao\dlls515\msvcp140.dll" />
+            </Component>
+            <Component Id="msvcp140" Guid="87f227bf-e565-43a3-a912-3efbaf4d7d2e">
+              <File Source="C:\TOTVS\Producao\dlls515\opengl32sw.dll" />
+            </Component>
+            <Component Id="opengl32sw" Guid="18d9e855-9142-475b-835f-1a93387b6219">
+              <File Source="C:\TOTVS\Producao\dlls515\Qt5Chartstotvs.dll" />
+            </Component>
+            <Component Id="Qt5Chartstotvs" Guid="b3c636b1-692d-40cd-914f-3a1a055c802b">
+              <File Source="C:\TOTVS\Producao\dlls515\Qt5Coretotvs.dll" />
+            </Component>
+            <Component Id="Qt5Coretotvs" Guid="e31def76-6388-43a5-bd27-adc304e83e86">
+              <File Source="C:\TOTVS\Producao\dlls515\Qt5Guitotvs.dll" />
+            </Component>
+            <Component Id="Qt5Guitotvs" Guid="12386811-fd38-4a86-b00d-2b17358c218c">
+              <File Source="C:\TOTVS\Producao\dlls515\Qt5Networktotvs.dll" />
+            </Component>
+            <Component Id="Qt5Networktotvs" Guid="c3e517af-6bba-479a-91e4-485074b062ea">
+              <File Source="C:\TOTVS\Producao\dlls515\Qt5Positioningtotvs.dll" />
+            </Component>
+            <Component Id="Qt5Positioningtotvs" Guid="7dbf7f38-8ad0-48d4-b626-4011efa06c74">
+              <File Source="C:\TOTVS\Producao\dlls515\Qt5PrintSupporttotvs.dll" />
+            </Component>
+            <Component Id="Qt5PrintSupporttotvs" Guid="a7928f08-36f0-40c9-860e-683c3a10d64e">
+              <File Source="C:\TOTVS\Producao\dlls515\Qt5QmlModelstotvs.dll" />
+            </Component>
+            <Component Id="Qt5Qmltotvs" Guid="c53a07bc-9e9a-4075-8035-4b2c60074f87">
+              <File Source="C:\TOTVS\Producao\dlls515\Qt5Qmltotvs.dll" />
+            </Component>
+            <Component Id="Qt5Quicktotvs" Guid="81fbe3ce-c40a-4066-a1c0-de8f059caa29">
+              <File Source="C:\TOTVS\Producao\dlls515\Qt5Quicktotvs.dll" />
+            </Component>
+            <Component Id="Qt5QuickWidgetstotvs" Guid="58030a1d-ab20-4c6b-a1dc-4a99a3dcb135">
+              <File Source="C:\TOTVS\Producao\dlls515\Qt5QuickWidgetstotvs.dll" />
+            </Component>
+            <Component Id="Qt5SerialPorttotvs" Guid="024cf5f4-8cf4-4af6-adba-a32d882cc21c">
+              <File Source="C:\TOTVS\Producao\dlls515\Qt5SerialPorttotvs.dll" />
+            </Component>
+            <Component Id="Qt5Svgtotvs" Guid="0a3b7249-ffe9-469d-97b9-70215ae24c88">
+              <File Source="C:\TOTVS\Producao\dlls515\Qt5Svgtotvs.dll" />
+            </Component>
+            <Component Id="Qt5WebChanneltotvs" Guid="6d8b8fa8-bfd0-455b-a23b-c32b23992a50">
+              <File Source="C:\TOTVS\Producao\dlls515\Qt5WebChanneltotvs.dll" />
+            </Component>
+            <Component Id="Qt5WebEngineCoretotvs" Guid="baf30fca-a06a-4387-9659-43f397ade648">
+              <File Source="C:\TOTVS\Producao\dlls515\Qt5WebEngineCoretotvs.dll" />
+            </Component>
+            <Component Id="Qt5WebEngineWidgetstotvs" Guid="91362585-4291-4cbf-b395-2cf9d6acce48">
+              <File Source="C:\TOTVS\Producao\dlls515\Qt5WebEngineWidgetstotvs.dll" />
+            </Component>
+            <Component Id="Qt5WebSocketstotvs" Guid="a0506b05-35db-4799-8d11-81782cc18e27">
+              <File Source="C:\TOTVS\Producao\dlls515\Qt5WebSocketstotvs.dll" />
+            </Component>
+            <Component Id="Qt5Widgetstotvs" Guid="51bf55c0-7037-4406-b141-dfd1287f6f72">
+              <File Source="C:\TOTVS\Producao\dlls515\Qt5Widgetstotvs.dll" />
+            </Component>
+            <Component Id="Qt5Xmltotvs" Guid="ecc3eb10-5c59-4324-9148-ffcefa0ebb8c">
+              <File Source="C:\TOTVS\Producao\dlls515\Qt5Xmltotvs.dll" />
+            </Component>
+            <Component Id="singlesign" Guid="cea47bb3-47dd-4eb9-9266-5406bed78d03">
+              <File Source="C:\TOTVS\Producao\dlls515\singlesign.dll" />
+            </Component>
+            <Component Id="ucrtbase" Guid="7fe26e3f-f34c-4742-8b7a-6efeb110e1f8">
+              <File Source="C:\TOTVS\Producao\dlls515\ucrtbase.dll" />
+            </Component>
+            <Component Id="svcredist" Guid="b8e7c7ea-3722-4ed7-89ee-b9fb0636cca4">
+              <File Source="C:\TOTVS\Producao\dlls515\vc_redist.x64.exe" />
+            </Component>
+            <Component Id="vcruntime1401" Guid="9fa852a2-558b-4da7-a617-497234cbb465">
+              <File Source="C:\TOTVS\Producao\dlls515\vcruntime140_1.dll" />
+            </Component>
+            <Component Id="vcruntime140" Guid="51297da0-74cc-4b79-aab9-d5b1a796d520">
+              <File Source="C:\TOTVS\Producao\dlls515\vcruntime140.dll" />
+            </Component>          
+          </Directory>          
+         <!-- iconengines -->
+          <Directory Id="ICONENGINESFOLDER" Name="iconengines">
+              <Component Id="QSvgIconComponent" Guid="57f8b883-2414-4824-8f46-21378f7b001c">
+                  <File Source="C:\TOTVS\Producao\iconengines\qsvgicon.dll" />
+              </Component>
+          </Directory>
+          <!-- imageformats -->
+          <Directory Id="IMAGEFORMATSFOLDER" Name="imageformats">
+              <Component Id="QgifComponent" Guid="d986f446-71bd-421e-9d17-163465b1f804">
+                  <File Source="C:\TOTVS\Producao\imageformats\qgif.dll" />
+              </Component>
+              <Component Id="qicnsComponent" Guid="720a6ead-3577-49f5-a4f6-07c58cb6142c">
+                  <File Source="C:\TOTVS\Producao\imageformats\qicns.dll" />
+              </Component>
+              <Component Id="qicoComponent" Guid="3caa4762-130b-4bab-bae7-7723e004183b">
+                  <File Source="C:\TOTVS\Producao\imageformats\qico.dll" />
+              </Component>
+              <Component Id="qjpegComponent" Guid="5f42359c-a00e-479d-ad0a-425896878e9c">
+                  <File Source="C:\TOTVS\Producao\imageformats\qjpeg.dll" />
+              </Component>
+              <Component Id="qpdfComponent" Guid="9e58191d-02c0-4c33-b71e-d9722a81a769">
+                  <File Source="C:\TOTVS\Producao\imageformats\qpdf.dll" />
+              </Component>
+              <Component Id="qsvgComponent" Guid="28fac4b6-5bae-4d6d-a140-23e5765ad712">
+                  <File Source="C:\TOTVS\Producao\imageformats\qsvg.dll" />
+              </Component>
+              <Component Id="qtgaComponent" Guid="47ba549b-d6fd-4709-9015-3961db102c87">
+                  <File Source="C:\TOTVS\Producao\imageformats\qtga.dll" />
+              </Component>
+              <Component Id="qtiffComponent" Guid="e2100459-079c-4308-ad16-fc428d5cf7e3">
+                  <File Source="C:\TOTVS\Producao\imageformats\qtiff.dll" />
+              </Component>
+              <Component Id="qwbmpComponent" Guid="5f38a1c4-d022-4549-90ce-37dfd8f77f91">
+                  <File Source="C:\TOTVS\Producao\imageformats\qwbmp.dll" />
+              </Component>
+              <Component Id="qwebpComponent" Guid="c702cdd5-1f70-4047-a947-ec2d4c64ff4e">
+                  <File Source="C:\TOTVS\Producao\imageformats\qwebp.dll" />
+              </Component>
+              <!-- Continue adicionando os arquivos restantes da pasta imageformats aqui -->
+          </Directory>
+          <!-- platforms -->
+          <Directory Id="PLATFORMSFOLDER" Name="platforms">
+              <Component Id="QWindowsComponent" Guid="2be7d230-4f55-4e98-9d7e-d3819fcd7089">
+                  <File Source="C:\TOTVS\Producao\platforms\qwindows.dll" />
+              </Component>
+          </Directory>
+          <!-- position -->
+          <Directory Id="POSITIONFOLDER" Name="position">
+              <Component Id="QtPositionPollComponent" Guid="b98c26aa-ddd4-4dd1-8a21-1b75cb45e40d">
+                  <File Source="C:\TOTVS\Producao\position\qtposition_positionpoll.dll" />
+              </Component>
+              <Component Id="QtPositionserialnmeaComponent" Guid="6084e556-1a60-4965-8d2c-3f28f8c5b8d9">
+                  <File Source="C:\TOTVS\Producao\position\qtposition_serialnmea.dll" />
+              </Component>
+              <Component Id="QtPositionwinrtComponent" Guid="853d79f5-89da-4d5c-8874-3e1958d36d1e">
+                  <File Source="C:\TOTVS\Producao\position\qtposition_winrt.dll" />
+              </Component>
+              <!-- Continue adicionando os arquivos restantes da pasta position aqui -->
+          </Directory>
+          <!-- printsupport -->
+          <Directory Id="PRINTSUPPORTFOLDER" Name="printsupport">
+              <Component Id="WindowsPrinterSupportComponent" Guid="4592ac18-3b42-499a-a4fa-e3d191bc319a">
+                  <File Source="C:\TOTVS\Producao\printsupport\windowsprintersupport.dll" />
+              </Component>
+          </Directory>
+          <!-- resources -->
+          <Directory Id="RESOURCESFOLDER" Name="resources">
+              <Component Id="IcuDatComponent" Guid="97457f96-8d13-4015-8deb-14a05c5d6caa">
+                  <File Source="C:\TOTVS\Producao\resources\icudtl.dat" />
+              </Component>
+              <Component Id="DevtoolsResourcesComponent" Guid="e3e4ee21-f2d6-4b80-b038-4e326146b5a9">
+                  <File Source="C:\TOTVS\Producao\resources\qtwebengine_devtools_resources.pak" />
+              </Component>
+              <Component Id="Resources100Component" Guid="d7788570-8761-4fec-9f35-f3e28dd46cf1">
+                  <File Source="C:\TOTVS\Producao\resources\qtwebengine_resources_100p.pak" />
+              </Component>
+              <Component Id="Resources200Component" Guid="7382c25e-083d-43fd-b16c-72ca63de1711">
+                  <File Source="C:\TOTVS\Producao\resources\qtwebengine_resources_200p.pak" />
+              </Component>
+              <Component Id="resourcespakComponent" Guid="4062b4bf-2555-4149-af74-3bddfa10cb6f">
+                  <File Source="C:\TOTVS\Producao\resources\qtwebengine_resources.pak" />
+              </Component>
+              <!-- Continue adicionando os arquivos restantes da pasta resources aqui -->
+          </Directory>
+          <!-- styles -->
+          <Directory Id="STYLESFOLDER" Name="styles">
+              <Component Id="Bb10StylePluginComponent" Guid="31d0e495-bffa-4494-9524-595f7fe4321d">
+                  <File Source="C:\TOTVS\Producao\styles\bb10styleplugin.dll" />
+              </Component>
+              <Component Id="QcleanlooksstyleComponent" Guid="6f3cf88b-bfbe-4b37-9bae-48b4e8dcd2e7">
+                  <File Source="C:\TOTVS\Producao\styles\qcleanlooksstyle.dll" />
+              </Component>
+              <Component Id="QmotifstyleComponent" Guid="c9740313-e0a0-491c-8028-b4776e8398cf">
+                  <File Source="C:\TOTVS\Producao\styles\qmotifstyle.dll" />
+              </Component>
+              <Component Id="QplastiquestyleComponent" Guid="4291907c-b1bf-42a6-bb38-3b31004a102d">
+                  <File Source="C:\TOTVS\Producao\styles\qplastiquestyle.dll" />
+              </Component>
+              <Component Id="QwindowsvistastyleComponent" Guid="9d4f03c8-a296-40b0-954e-a13f5653be04">
+                  <File Source="C:\TOTVS\Producao\styles\qwindowsvistastyle.dll" />
+              </Component>
+              <!-- Continue adicionando os arquivos restantes da pasta styles aqui -->
+          </Directory> 
+          <Directory Id="TRANSLATIONS" Name="translations">
+              <Directory Id="QTWEBENGINE_LOCALES" Name="qtwebengine_locales">
+                <Component Id="PtBRComponent" Guid="0ef3a16b-77d2-4981-99da-20be6977b18b">
+                  <File Source="C:\TOTVS\Producao\translations\qtwebengine_locales\pt-BR.pak" />
+                </Component>
+              </Directory>
+            <Component Id="QtptBRComponent" Guid="adb5e482-3c26-47d8-8b9f-279b090d2cd3">
+              <File Source="C:\TOTVS\Producao\translations\qt_pt_BR.qm" />
+            </Component>
+          </Directory>    
+        </Directory>
+      </Directory>
+    </Directory>
+  </Fragment>
+  
+  <Fragment>
+    <ComponentGroup Id="ProductComponents">
+     <ComponentRef Id="BearerComponent" />
+        <ComponentRef Id="ApiMsWinCoreFileL12Component" />
+        <ComponentRef Id="ApiMsWinCoreFileL21Component" />
+        <ComponentRef Id="ApiMsWinCoreLocazation" />
+        <ComponentRef Id="ApiMsWinCoreProcessthreadsComponet" />
+        <ComponentRef Id="ApiMsWinCoreSynch" />
+        <ComponentRef Id="ApiMsWinCoreTimezone" />
+        <ComponentRef Id="ApiMsWinCrtconio" />
+        <ComponentRef Id="ApiMsWinCrtconvert" />
+        <ComponentRef Id="ApiMsWinCrtEnvironment" />
+        <ComponentRef Id="apimswincrtfilesysteml110" />
+        <ComponentRef Id="apimswincrtheapl110" />
+        <ComponentRef Id="apimswincrtlocalel110" />
+        <ComponentRef Id="apimswincrtmathl110" />
+        <ComponentRef Id="apimswincrtmultibytel110" />
+        <ComponentRef Id="apimswincrtruntimel110" />
+        <ComponentRef Id="apimswincrtstdiol110" />
+        <ComponentRef Id="apimswincrtstringl110" />
+        <ComponentRef Id="apimswincrttimel110" />
+        <ComponentRef Id="apimswincrtutilityl110" />
+        <ComponentRef Id="D3Dcompiler47" />
+        <ComponentRef Id="dlls515.manifest" />
+        <ComponentRef Id="kdchart2" />
+        <ComponentRef Id="libEGL.dll" />
+        <ComponentRef Id="svcp1401" />
+        <ComponentRef Id="libGLESv2" />
+        <ComponentRef Id="msvcp1401" />
+        <ComponentRef Id="msvcp140" />
+        <ComponentRef Id="opengl32sw" />
+        <ComponentRef Id="Qt5Chartstotvs" />
+        <ComponentRef Id="Qt5Coretotvs" />
+        <ComponentRef Id="Qt5Guitotvs" />
+        <ComponentRef Id="Qt5Networktotvs" />
+        <ComponentRef Id="Qt5Positioningtotvs" />
+        <ComponentRef Id="Qt5PrintSupporttotvs" />
+        <ComponentRef Id="Qt5Qmltotvs" />
+        <ComponentRef Id="Qt5Quicktotvs" />
+        <ComponentRef Id="Qt5QuickWidgetstotvs" />
+        <ComponentRef Id="Qt5SerialPorttotvs" />
+        <ComponentRef Id="Qt5Svgtotvs" />
+        <ComponentRef Id="Qt5WebChanneltotvs" />
+        <ComponentRef Id="Qt5WebEngineCoretotvs" />
+        <ComponentRef Id="Qt5WebEngineWidgetstotvs" />
+        <ComponentRef Id="Qt5WebSocketstotvs" />
+        <ComponentRef Id="Qt5Widgetstotvs" />
+        <ComponentRef Id="Qt5Xmltotvs" />
+        <ComponentRef Id="singlesign" />
+        <ComponentRef Id="ucrtbase" />
+        <ComponentRef Id="svcredist" />
+        <ComponentRef Id="vcruntime1401" />
+        <ComponentRef Id="vcruntime140" />
+        <ComponentRef Id="QSvgIconComponent" />
+        <ComponentRef Id="QgifComponent" />
+        <ComponentRef Id="qicnsComponent" />
+        <!-- iconengines -->
+        <ComponentRef Id="QSvgIconComponent" />
+        <!-- imageformats -->
+        <ComponentRef Id="QgifComponent" />
+        <ComponentRef Id="qicnsComponent" />
+        <ComponentRef Id="qicoComponent" />
+        <ComponentRef Id="qjpegComponent" />
+        <ComponentRef Id="qpdfComponent" />
+        <ComponentRef Id="qsvgComponent" />
+        <ComponentRef Id="qtgaComponent" />
+        <ComponentRef Id="qtiffComponent" />
+        <ComponentRef Id="qwbmpComponent" />
+        <ComponentRef Id="qwebpComponent" />
+        <!-- platforms -->
+        <ComponentRef Id="QWindowsComponent" />
+        <!-- position -->
+        <ComponentRef Id="QtPositionPollComponent" />
+        <ComponentRef Id="QtPositionserialnmeaComponent" />
+        <ComponentRef Id="QtPositionwinrtComponent" />
+        <!-- printsupport -->
+        <ComponentRef Id="WindowsPrinterSupportComponent" />
+        <!-- resources -->
+        <ComponentRef Id="IcuDatComponent" />
+        <ComponentRef Id="DevtoolsResourcesComponent" />
+        <ComponentRef Id="Resources100Component" />
+        <ComponentRef Id="Resources200Component" />
+        <ComponentRef Id="resourcespakComponent" />
+        <ComponentRef Id="PtBRComponent" />
+	      <ComponentRef Id="QtptBRComponent" />
+        <!-- styles -->
+        <ComponentRef Id="Bb10StylePluginComponent" />
+        <ComponentRef Id="QcleanlooksstyleComponent" />
+        <ComponentRef Id="QmotifstyleComponent" />
+        <ComponentRef Id="QplastiquestyleComponent" />
+        <ComponentRef Id="QwindowsvistastyleComponent" />
+        <ComponentRef Id="ApapiComponet" /> 
+        <ComponentRef Id="Apapi64Componet" />    
+        <ComponentRef Id="ApconnComponet" />    
+        <ComponentRef Id="ApexcelComponet" />
+        <ComponentRef Id="EscapiComponet" />    
+        <ComponentRef Id="ImageloadComponet"/> 
+        <ComponentRef Id="LanguageComponet"/>
+        <ComponentRef Id="LibCryptoComponet" />    
+        <ComponentRef Id="LibCrypto11Componet" />    
+        <ComponentRef Id="Libssl11Componet" />    
+        <ComponentRef Id="MpexcelComponet" />    
+        <ComponentRef Id="MpprojectComponet" />    
+        <ComponentRef Id="MpvisioComponet"/>    
+        <ComponentRef Id="MpwordComponet"/>
+        <ComponentRef Id="Mswin32extComponet" />    
+        <ComponentRef Id="Opengl32Componet"/>    
+        <ComponentRef Id="PrinterComponet" />    
+        <ComponentRef Id="QtwebEngineProcessComponet" />    
+        <ComponentRef Id="SmartClientComponet"/>    
+        <ComponentRef Id="SmartclientiniComponet"/>    
+        <ComponentRef Id="Tolecontainer64Componet" />    
+        <ComponentRef Id="TotvscaComponet" />
+    </ComponentGroup>
+  </Fragment>
+</Wix>
