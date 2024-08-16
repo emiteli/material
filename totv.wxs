@@ -355,7 +355,7 @@
   
   <Fragment>
     <ComponentGroup Id="ProductComponents">
-     <ComponentRef Id="BearerComponent" />
+        <ComponentRef Id="BearerComponent" />
         <ComponentRef Id="ApiMsWinCoreFileL12Component" />
         <ComponentRef Id="ApiMsWinCoreFileL21Component" />
         <ComponentRef Id="ApiMsWinCoreLocazation" />
@@ -437,7 +437,7 @@
         <ComponentRef Id="Resources200Component" />
         <ComponentRef Id="resourcespakComponent" />
         <ComponentRef Id="PtBRComponent" />
-	      <ComponentRef Id="QtptBRComponent" />
+	<ComponentRef Id="QtptBRComponent" />
         <!-- styles -->
         <ComponentRef Id="Bb10StylePluginComponent" />
         <ComponentRef Id="QcleanlooksstyleComponent" />
